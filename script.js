@@ -1,6 +1,8 @@
 'use strict';
 
 /*
+// Scoping in Practice
+
 function calcAge(birthYear) {
   const age = 2025 - birthYear;
 
@@ -34,3 +36,43 @@ function calcAge(birthYear) {
 const firstName = 'Talha';
 calcAge(1998);
 */
+
+// Hoisting and TDZ in Practice
+
+// Variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Talha';
+let job = 'teacher';
+const year = 1998;
+
+// Functions
+console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3));
+// console.log(addExpr(2, 3));
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+var addExpr = function (a, b) {
+  return a + b;
+};
+
+var addArrow = (a, b) => a + b;
+
+// Example
+
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
