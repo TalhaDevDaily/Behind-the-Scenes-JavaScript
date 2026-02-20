@@ -116,6 +116,7 @@ const f = talha.calcAge;
 // f();
 */
 
+/*
 // Regular Functions vs. Arrow Functions
 // var firstName = 'Jonas';
 
@@ -126,15 +127,15 @@ const talha = {
     // console.log(this);
     // console.log(2037 - this.year);
 
-    /*
+    
     // Solution 1
-    const self = this; // self or that
-    const isGenZ = function () {
-      console.log(self);
-      console.log(self.year >= 1997 && self.year <= 2012);
-      console.log(this.year >= 1997 && this.year <= 2012);
-    };
-    */
+    // const self = this; // self or that
+    // const isGenZ = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1997 && self.year <= 2012);
+    //   console.log(this.year >= 1997 && this.year <= 2012);
+    // };
+
 
     // Solution 2
     const isGenZ = () => {
@@ -160,8 +161,29 @@ addExpr(2, 5);
 addExpr(2, 5, 8, 12);
 
 var addArrow = (a, b) => {
-  console.log(arguments);
+  // console.log(arguments);
   return a + b;
 };
 
 addArrow();
+*/
+
+// Object References in Practice(Shallow vs. Deep Copies)
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica, 'Davis');
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'davis';
+
+console.log('Before:', jessica);
+console.log('After:', marriedJessica);
